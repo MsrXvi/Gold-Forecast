@@ -1,0 +1,131 @@
+2025-11-26 02:51:01,079 - INFO - Script execution started
+2025-11-26 02:51:01,081 - INFO - Command line arguments: ['C:\\laragon\\www\\prediksi-harga-emas\\python_scripts/update_data.py', 'historical', '6']
+2025-11-26 02:51:01,083 - INFO - ======================================================================
+2025-11-26 02:51:01,084 - INFO - Initializing GoldDataUpdater
+2025-11-26 02:51:01,084 - INFO - Python Version: 3.10.6 (tags/v3.10.6:9c7b4bd, Aug  1 2022, 21:53:49) [MSC v.1932 64 bit (AMD64)]
+2025-11-26 02:51:01,085 - INFO - Working Directory: C:\laragon\www\prediksi-harga-emas\public
+2025-11-26 02:51:01,085 - INFO - Script Directory: C:\laragon\www\prediksi-harga-emas\python_scripts
+2025-11-26 02:51:01,086 - INFO - Log File: C:\laragon\www\prediksi-harga-emas\python_scripts\logs\update_data_20251126.log
+2025-11-26 02:51:01,086 - DEBUG - Database Configuration:
+2025-11-26 02:51:01,086 - DEBUG - Host: 127.0.0.1
+2025-11-26 02:51:01,086 - DEBUG - Port: 3306
+2025-11-26 02:51:01,086 - DEBUG - Database: db_prediksi_emas
+2025-11-26 02:51:01,087 - DEBUG - User: root
+2025-11-26 02:51:01,087 - DEBUG - Password: (empty)
+2025-11-26 02:51:01,087 - INFO - Command received: historical
+2025-11-26 02:51:01,087 - ERROR - Unknown command: historical
+2025-11-26 02:51:01,087 - INFO - Script execution finished
+2025-11-26 02:52:34,527 - INFO - Script execution started
+2025-11-26 02:52:34,528 - INFO - Command line arguments: ['C:\\laragon\\www\\prediksi-harga-emas\\python_scripts/update_data.py', 'historical', '1']
+2025-11-26 02:52:34,528 - INFO - ======================================================================
+2025-11-26 02:52:34,528 - INFO - Initializing GoldDataUpdater
+2025-11-26 02:52:34,529 - INFO - Python Version: 3.10.6 (tags/v3.10.6:9c7b4bd, Aug  1 2022, 21:53:49) [MSC v.1932 64 bit (AMD64)]
+2025-11-26 02:52:34,529 - INFO - Working Directory: C:\laragon\www\prediksi-harga-emas\public
+2025-11-26 02:52:34,529 - INFO - Script Directory: C:\laragon\www\prediksi-harga-emas\python_scripts
+2025-11-26 02:52:34,529 - INFO - Log File: C:\laragon\www\prediksi-harga-emas\python_scripts\logs\update_data_20251126.log
+2025-11-26 02:52:34,529 - DEBUG - Database Configuration:
+2025-11-26 02:52:34,529 - DEBUG - Host: 127.0.0.1
+2025-11-26 02:52:34,529 - DEBUG - Port: 3306
+2025-11-26 02:52:34,529 - DEBUG - Database: db_prediksi_emas
+2025-11-26 02:52:34,530 - DEBUG - User: root
+2025-11-26 02:52:34,530 - DEBUG - Password: (empty)
+2025-11-26 02:52:34,530 - INFO - Command received: historical
+2025-11-26 02:52:34,530 - ERROR - Unknown command: historical
+2025-11-26 02:52:34,530 - INFO - Script execution finished
+2025-11-26 03:05:04,194 - INFO - Script execution started
+2025-11-26 03:05:04,195 - INFO - Command line arguments: ['C:\\laragon\\www\\prediksi-harga-emas\\python_scripts/update_data.py', 'today']
+2025-11-26 03:05:04,196 - INFO - ======================================================================
+2025-11-26 03:05:04,196 - INFO - Initializing GoldDataUpdater
+2025-11-26 03:05:04,196 - INFO - Python Version: 3.10.6 (tags/v3.10.6:9c7b4bd, Aug  1 2022, 21:53:49) [MSC v.1932 64 bit (AMD64)]
+2025-11-26 03:05:04,196 - INFO - Working Directory: C:\laragon\www\prediksi-harga-emas
+2025-11-26 03:05:04,196 - INFO - Script Directory: C:\laragon\www\prediksi-harga-emas\python_scripts
+2025-11-26 03:05:04,196 - INFO - Log File: C:\laragon\www\prediksi-harga-emas\python_scripts\logs\update_data_20251126.log
+2025-11-26 03:05:04,196 - DEBUG - Database Configuration:
+2025-11-26 03:05:04,197 - DEBUG - Host: 127.0.0.1
+2025-11-26 03:05:04,197 - DEBUG - Port: 3306
+2025-11-26 03:05:04,197 - DEBUG - Database: db_prediksi_emas
+2025-11-26 03:05:04,197 - DEBUG - User: root
+2025-11-26 03:05:04,197 - DEBUG - Password: (empty)
+2025-11-26 03:05:04,197 - INFO - Command received: today
+2025-11-26 03:05:04,197 - INFO - ======================================================================
+2025-11-26 03:05:04,197 - INFO - GOLD DATA UPDATER v2.1 - Update Started
+2025-11-26 03:05:04,197 - INFO - ======================================================================
+2025-11-26 03:05:04,198 - INFO - Tanggal sistem: 2025-11-26 03:05:04
+2025-11-26 03:05:04,198 - INFO - Attempting database connection...
+2025-11-26 03:05:04,226 - INFO - Koneksi database berhasil - Total data existing: 0
+2025-11-26 03:05:04,227 - INFO - Fetching gold price data from Yahoo Finance...
+2025-11-26 03:05:04,229 - INFO - Periode: 2025-11-16 sampai 2025-11-26
+2025-11-26 03:05:04,229 - DEBUG - Entering history()
+2025-11-26 03:05:04,235 - DEBUG - ('CREATE TABLE IF NOT EXISTS "_tz_kv" ("key" VARCHAR(255) NOT NULL PRIMARY KEY, "value" VARCHAR(255)) WITHOUT ROWID', [])
+2025-11-26 03:05:04,240 - DEBUG - ('SELECT "t1"."key", "t1"."value" FROM "_tz_kv" AS "t1" WHERE ("t1"."key" = ?) LIMIT ? OFFSET ?', ['GC=F', 1, 0])
+2025-11-26 03:05:04,443 - DEBUG -  Entering history()
+2025-11-26 03:05:04,455 - DEBUG - GC=F: Yahoo GET parameters: {'period1': '2025-11-16 00:00:00-05:00', 'period2': '2025-11-26 00:00:00-05:00', 'interval': '1d', 'includePrePost': False, 'events': 'div,splits,capitalGains'}
+2025-11-26 03:05:04,456 - DEBUG -   Entering get()
+2025-11-26 03:05:04,456 - DEBUG -    Entering _make_request()
+2025-11-26 03:05:04,456 - DEBUG - url=https://query2.finance.yahoo.com/v8/finance/chart/GC=F
+2025-11-26 03:05:04,457 - DEBUG - params={'period1': 1763269200, 'period2': 1764133200, 'interval': '1d', 'includePrePost': False, 'events': 'div,splits,capitalGains'}
+2025-11-26 03:05:04,457 - DEBUG -     Entering _get_cookie_and_crumb()
+2025-11-26 03:05:04,457 - DEBUG - cookie_mode = 'basic'
+2025-11-26 03:05:04,457 - DEBUG -      Entering _get_cookie_and_crumb_basic()
+2025-11-26 03:05:04,457 - DEBUG -       Entering _get_cookie_basic()
+2025-11-26 03:05:04,457 - DEBUG -        Entering _load_cookie_curlCffi()
+2025-11-26 03:05:04,462 - DEBUG - ('CREATE TABLE IF NOT EXISTS "_cookieschema" ("strategy" VARCHAR(255) NOT NULL PRIMARY KEY, "fetch_date" DATETIME NOT NULL, "cookie_bytes" BLOB NOT NULL) WITHOUT ROWID', [])
+2025-11-26 03:05:04,464 - DEBUG - ('SELECT "t1"."strategy", "t1"."fetch_date", "t1"."cookie_bytes" FROM "_cookieschema" AS "t1" WHERE ("t1"."strategy" = ?) LIMIT ? OFFSET ?', ['curlCffi', 1, 0])
+2025-11-26 03:05:04,465 - DEBUG -        Exiting _load_cookie_curlCffi()
+2025-11-26 03:05:04,465 - DEBUG - reusing persistent cookie
+2025-11-26 03:05:04,465 - DEBUG -       Exiting _get_cookie_basic()
+2025-11-26 03:05:04,465 - DEBUG -       Entering _get_crumb_basic()
+2025-11-26 03:05:04,465 - DEBUG -        Entering _get_cookie_basic()
+2025-11-26 03:05:04,466 - DEBUG - reusing cookie
+2025-11-26 03:05:04,466 - DEBUG -        Exiting _get_cookie_basic()
+2025-11-26 03:05:05,633 - DEBUG - crumb = '5SvJvkxsg2O'
+2025-11-26 03:05:05,634 - DEBUG -       Exiting _get_crumb_basic()
+2025-11-26 03:05:05,634 - DEBUG -      Exiting _get_cookie_and_crumb_basic()
+2025-11-26 03:05:05,634 - DEBUG -     Exiting _get_cookie_and_crumb()
+2025-11-26 03:05:06,340 - DEBUG - response code=200
+2025-11-26 03:05:06,342 - DEBUG -    Exiting _make_request()
+2025-11-26 03:05:06,342 - DEBUG -   Exiting get()
+2025-11-26 03:05:06,346 - DEBUG - GC=F: yfinance received OHLC data: 2025-11-17 05:00:00 -> 2025-11-25 19:55:02
+2025-11-26 03:05:06,349 - DEBUG - GC=F: OHLC after cleaning: 2025-11-17 00:00:00-05:00 -> 2025-11-25 14:55:02-05:00
+2025-11-26 03:05:06,367 - DEBUG - GC=F: OHLC after combining events: 2025-11-17 00:00:00-05:00 -> 2025-11-25 00:00:00-05:00
+2025-11-26 03:05:06,384 - DEBUG - GC=F: yfinance returning OHLC: 2025-11-17 00:00:00-05:00 -> 2025-11-25 00:00:00-05:00
+2025-11-26 03:05:06,385 - DEBUG -  Exiting history()
+2025-11-26 03:05:06,385 - DEBUG - Exiting history()
+2025-11-26 03:05:06,385 - INFO - Berhasil mengambil 7 baris data
+2025-11-26 03:05:06,389 - INFO - Rentang: 2025-11-17 s/d 2025-11-25
+2025-11-26 03:05:06,390 - INFO - Harga terakhir: $4166.10 per troy ounce
+2025-11-26 03:05:06,390 - DEBUG - Last 3 data points from Yahoo Finance:
+2025-11-26 03:05:06,390 - DEBUG - 2025-11-25: $4166.10
+2025-11-26 03:05:06,391 - DEBUG - 2025-11-24: $4091.90
+2025-11-26 03:05:06,391 - DEBUG - 2025-11-21: $4076.70
+2025-11-26 03:05:06,391 - INFO - Starting database save operation...
+2025-11-26 03:05:06,391 - INFO - Attempting database connection...
+2025-11-26 03:05:06,399 - INFO - Koneksi database berhasil - Total data existing: 0
+2025-11-26 03:05:06,401 - DEBUG - Check existing data for 2025-11-17: Not found
+2025-11-26 03:05:06,402 - DEBUG - Executing query for 2025-11-17: USD $4068.3, IDR Rp2186940.17
+2025-11-26 03:05:06,408 - INFO - Inserted: 2025-11-17
+2025-11-26 03:05:06,410 - DEBUG - Check existing data for 2025-11-18: Not found
+2025-11-26 03:05:06,410 - DEBUG - Executing query for 2025-11-18: USD $4061.3, IDR Rp2183177.28
+2025-11-26 03:05:06,412 - INFO - Inserted: 2025-11-18
+2025-11-26 03:05:06,414 - DEBUG - Check existing data for 2025-11-19: Not found
+2025-11-26 03:05:06,415 - DEBUG - Executing query for 2025-11-19: USD $4077.7, IDR Rp2191993.2
+2025-11-26 03:05:06,416 - INFO - Inserted: 2025-11-19
+2025-11-26 03:05:06,418 - DEBUG - Check existing data for 2025-11-20: Not found
+2025-11-26 03:05:06,419 - DEBUG - Executing query for 2025-11-20: USD $4056.5, IDR Rp2180597.01
+2025-11-26 03:05:06,422 - INFO - Inserted: 2025-11-20
+2025-11-26 03:05:06,425 - DEBUG - Check existing data for 2025-11-21: Not found
+2025-11-26 03:05:06,425 - DEBUG - Executing query for 2025-11-21: USD $4076.7, IDR Rp2191455.65
+2025-11-26 03:05:06,427 - INFO - Inserted: 2025-11-21
+2025-11-26 03:05:06,429 - DEBUG - Check existing data for 2025-11-24: Not found
+2025-11-26 03:05:06,429 - DEBUG - Executing query for 2025-11-24: USD $4091.9, IDR Rp2199626.5
+2025-11-26 03:05:06,430 - INFO - Inserted: 2025-11-24
+2025-11-26 03:05:06,432 - DEBUG - Check existing data for 2025-11-25: Not found
+2025-11-26 03:05:06,432 - DEBUG - Executing query for 2025-11-25: USD $4166.1, IDR Rp2239513.18
+2025-11-26 03:05:06,434 - INFO - Inserted: 2025-11-25
+2025-11-26 03:05:06,441 - INFO - Database COMMIT successful!
+2025-11-26 03:05:06,442 - INFO - Summary: Saved: 7, Updated: 0, Skipped: 0, Errors: 0
+2025-11-26 03:05:06,442 - INFO - JSON Result: {"success": true, "saved": 7, "updated": 0, "skipped": 0, "errors": 0}
+2025-11-26 03:05:06,443 - INFO - Database connection closed
+2025-11-26 03:05:06,443 - INFO - Update completed successfully!
+2025-11-26 03:05:06,443 - INFO - ======================================================================
+2025-11-26 03:05:06,443 - INFO - Script execution finished

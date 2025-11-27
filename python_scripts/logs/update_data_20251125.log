@@ -1,0 +1,674 @@
+2025-11-25 19:41:50,432 - INFO - Script execution started
+2025-11-25 19:41:50,433 - INFO - Command line arguments: ['C:\\laragon\\www\\prediksi-harga-emas\\python_scripts/update_data.py', 'today']
+2025-11-25 19:41:50,433 - INFO - ======================================================================
+2025-11-25 19:41:50,433 - INFO - Initializing GoldDataUpdater
+2025-11-25 19:41:50,433 - INFO - Python Version: 3.10.6 (tags/v3.10.6:9c7b4bd, Aug  1 2022, 21:53:49) [MSC v.1932 64 bit (AMD64)]
+2025-11-25 19:41:50,433 - INFO - Working Directory: C:\laragon\www\prediksi-harga-emas
+2025-11-25 19:41:50,434 - INFO - Script Directory: C:\laragon\www\prediksi-harga-emas\python_scripts
+2025-11-25 19:41:50,434 - INFO - Log File: C:\laragon\www\prediksi-harga-emas\python_scripts\logs\update_data_20251125.log
+2025-11-25 19:41:50,434 - DEBUG - Database Configuration:
+2025-11-25 19:41:50,438 - DEBUG - Host: 127.0.0.1
+2025-11-25 19:41:50,439 - DEBUG - Port: 3306
+2025-11-25 19:41:50,439 - DEBUG - Database: db_prediksi_emas
+2025-11-25 19:41:50,439 - DEBUG - User: root
+2025-11-25 19:41:50,439 - DEBUG - Password: (empty)
+2025-11-25 19:41:50,439 - INFO - Command received: today
+2025-11-25 19:41:50,439 - INFO - ======================================================================
+2025-11-25 19:41:50,440 - INFO - GOLD DATA UPDATER v2.1 - Update Started
+2025-11-25 19:41:50,440 - INFO - ======================================================================
+2025-11-25 19:41:50,440 - INFO - Tanggal sistem: 2025-11-25 19:41:50
+2025-11-25 19:41:50,440 - INFO - Attempting database connection...
+2025-11-25 19:41:50,459 - INFO - Koneksi database berhasil - Total data existing: 1256
+2025-11-25 19:41:50,461 - INFO - Latest DB data: 2025-11-24 - $4091.90
+2025-11-25 19:41:50,461 - INFO - Fetching gold price data from Yahoo Finance...
+2025-11-25 19:41:50,461 - INFO - Periode: 2025-11-15 sampai 2025-11-25
+2025-11-25 19:41:50,461 - DEBUG - Entering history()
+2025-11-25 19:41:50,476 - DEBUG - ('CREATE TABLE IF NOT EXISTS "_tz_kv" ("key" VARCHAR(255) NOT NULL PRIMARY KEY, "value" VARCHAR(255)) WITHOUT ROWID', [])
+2025-11-25 19:41:50,476 - DEBUG - ('SELECT "t1"."key", "t1"."value" FROM "_tz_kv" AS "t1" WHERE ("t1"."key" = ?) LIMIT ? OFFSET ?', ['GC=F', 1, 0])
+2025-11-25 19:41:50,706 - DEBUG -  Entering history()
+2025-11-25 19:41:50,723 - DEBUG - GC=F: Yahoo GET parameters: {'period1': '2025-11-15 00:00:00-05:00', 'period2': '2025-11-25 00:00:00-05:00', 'interval': '1d', 'includePrePost': False, 'events': 'div,splits,capitalGains'}
+2025-11-25 19:41:50,724 - DEBUG -   Entering get()
+2025-11-25 19:41:50,724 - DEBUG -    Entering _make_request()
+2025-11-25 19:41:50,725 - DEBUG - url=https://query2.finance.yahoo.com/v8/finance/chart/GC=F
+2025-11-25 19:41:50,725 - DEBUG - params=frozendict.frozendict({'period1': 1763182800, 'period2': 1764046800, 'interval': '1d', 'includePrePost': False, 'events': 'div,splits,capitalGains'})
+2025-11-25 19:41:50,725 - DEBUG -     Entering _get_cookie_and_crumb()
+2025-11-25 19:41:50,725 - DEBUG - cookie_mode = 'basic'
+2025-11-25 19:41:50,725 - DEBUG -      Entering _get_cookie_and_crumb_basic()
+2025-11-25 19:41:50,725 - DEBUG -       Entering _get_cookie_basic()
+2025-11-25 19:41:50,725 - DEBUG -        Entering _load_cookie_curlCffi()
+2025-11-25 19:41:50,728 - DEBUG - ('CREATE TABLE IF NOT EXISTS "_cookieschema" ("strategy" VARCHAR(255) NOT NULL PRIMARY KEY, "fetch_date" DATETIME NOT NULL, "cookie_bytes" BLOB NOT NULL) WITHOUT ROWID', [])
+2025-11-25 19:41:50,729 - DEBUG - ('SELECT "t1"."strategy", "t1"."fetch_date", "t1"."cookie_bytes" FROM "_cookieschema" AS "t1" WHERE ("t1"."strategy" = ?) LIMIT ? OFFSET ?', ['curlCffi', 1, 0])
+2025-11-25 19:41:50,729 - DEBUG -        Exiting _load_cookie_curlCffi()
+2025-11-25 19:41:50,729 - DEBUG - reusing persistent cookie
+2025-11-25 19:41:50,729 - DEBUG -       Exiting _get_cookie_basic()
+2025-11-25 19:41:50,730 - DEBUG -       Entering _get_crumb_basic()
+2025-11-25 19:41:50,730 - DEBUG -        Entering _get_cookie_basic()
+2025-11-25 19:41:50,730 - DEBUG - reusing cookie
+2025-11-25 19:41:50,730 - DEBUG -        Exiting _get_cookie_basic()
+2025-11-25 19:41:51,258 - DEBUG - crumb = '5SvJvkxsg2O'
+2025-11-25 19:41:51,258 - DEBUG -       Exiting _get_crumb_basic()
+2025-11-25 19:41:51,258 - DEBUG -      Exiting _get_cookie_and_crumb_basic()
+2025-11-25 19:41:51,258 - DEBUG -     Exiting _get_cookie_and_crumb()
+2025-11-25 19:41:51,563 - DEBUG - response code=200
+2025-11-25 19:41:51,563 - DEBUG -    Exiting _make_request()
+2025-11-25 19:41:51,564 - DEBUG -   Exiting get()
+2025-11-25 19:41:51,595 - DEBUG - GC=F: yfinance received OHLC data: 2025-11-17 05:00:00 -> 2025-11-24 05:00:00
+2025-11-25 19:41:51,605 - DEBUG - GC=F: OHLC after cleaning: 2025-11-17 00:00:00-05:00 -> 2025-11-24 00:00:00-05:00
+2025-11-25 19:41:51,626 - DEBUG - GC=F: OHLC after combining events: 2025-11-17 00:00:00-05:00 -> 2025-11-24 00:00:00-05:00
+2025-11-25 19:41:51,646 - DEBUG - GC=F: yfinance returning OHLC: 2025-11-17 00:00:00-05:00 -> 2025-11-24 00:00:00-05:00
+2025-11-25 19:41:51,646 - DEBUG -  Exiting history()
+2025-11-25 19:41:51,646 - DEBUG - Exiting history()
+2025-11-25 19:41:51,646 - INFO - Berhasil mengambil 6 baris data
+2025-11-25 19:41:51,647 - INFO - Rentang: 2025-11-17 s/d 2025-11-24
+2025-11-25 19:41:51,647 - INFO - Harga terakhir: $4091.90 per troy ounce
+2025-11-25 19:41:51,647 - DEBUG - Last 3 data points from Yahoo Finance:
+2025-11-25 19:41:51,648 - DEBUG - 2025-11-24: $4091.90
+2025-11-25 19:41:51,648 - DEBUG - 2025-11-21: $4076.70
+2025-11-25 19:41:51,648 - DEBUG - 2025-11-20: $4056.50
+2025-11-25 19:41:51,648 - INFO - Starting database save operation...
+2025-11-25 19:41:51,648 - INFO - Attempting database connection...
+2025-11-25 19:41:51,659 - INFO - Koneksi database berhasil - Total data existing: 1256
+2025-11-25 19:41:51,662 - DEBUG - Check existing data for 2025-11-17: Found
+2025-11-25 19:41:51,663 - DEBUG - Skipped: 2025-11-17: Data sama, skip
+2025-11-25 19:41:51,664 - DEBUG - Check existing data for 2025-11-18: Found
+2025-11-25 19:41:51,665 - DEBUG - Skipped: 2025-11-18: Data sama, skip
+2025-11-25 19:41:51,668 - DEBUG - Check existing data for 2025-11-19: Found
+2025-11-25 19:41:51,669 - DEBUG - Skipped: 2025-11-19: Data sama, skip
+2025-11-25 19:41:51,673 - DEBUG - Check existing data for 2025-11-20: Found
+2025-11-25 19:41:51,673 - DEBUG - Skipped: 2025-11-20: Data sama, skip
+2025-11-25 19:41:51,675 - DEBUG - Check existing data for 2025-11-21: Found
+2025-11-25 19:41:51,675 - DEBUG - Skipped: 2025-11-21: Data sama, skip
+2025-11-25 19:41:51,677 - DEBUG - Check existing data for 2025-11-24: Found
+2025-11-25 19:41:51,677 - DEBUG - Skipped: 2025-11-24: Data sama, skip
+2025-11-25 19:41:51,678 - INFO - Database COMMIT successful!
+2025-11-25 19:41:51,678 - INFO - Summary: Saved: 0, Updated: 0, Skipped: 6, Errors: 0
+2025-11-25 19:41:51,678 - INFO - JSON Result: {"success": true, "saved": 0, "updated": 0, "skipped": 6, "errors": 0}
+2025-11-25 19:41:51,679 - INFO - Database connection closed
+2025-11-25 19:41:51,679 - INFO - Update completed successfully!
+2025-11-25 19:41:51,679 - INFO - ======================================================================
+2025-11-25 19:41:51,679 - INFO - Script execution finished
+2025-11-25 19:59:08,069 - INFO - Script execution started
+2025-11-25 19:59:08,069 - INFO - Command line arguments: ['C:\\laragon\\www\\prediksi-harga-emas\\python_scripts/update_data.py', 'today']
+2025-11-25 19:59:08,069 - INFO - ======================================================================
+2025-11-25 19:59:08,070 - INFO - Initializing GoldDataUpdater
+2025-11-25 19:59:08,070 - INFO - Python Version: 3.10.6 (tags/v3.10.6:9c7b4bd, Aug  1 2022, 21:53:49) [MSC v.1932 64 bit (AMD64)]
+2025-11-25 19:59:08,070 - INFO - Working Directory: C:\laragon\www\prediksi-harga-emas
+2025-11-25 19:59:08,070 - INFO - Script Directory: C:\laragon\www\prediksi-harga-emas\python_scripts
+2025-11-25 19:59:08,070 - INFO - Log File: C:\laragon\www\prediksi-harga-emas\python_scripts\logs\update_data_20251125.log
+2025-11-25 19:59:08,070 - DEBUG - Database Configuration:
+2025-11-25 19:59:08,070 - DEBUG - Host: 127.0.0.1
+2025-11-25 19:59:08,070 - DEBUG - Port: 3306
+2025-11-25 19:59:08,070 - DEBUG - Database: db_prediksi_emas
+2025-11-25 19:59:08,070 - DEBUG - User: root
+2025-11-25 19:59:08,070 - DEBUG - Password: (empty)
+2025-11-25 19:59:08,070 - INFO - Command received: today
+2025-11-25 19:59:08,071 - INFO - ======================================================================
+2025-11-25 19:59:08,071 - INFO - GOLD DATA UPDATER v2.1 - Update Started
+2025-11-25 19:59:08,071 - INFO - ======================================================================
+2025-11-25 19:59:08,071 - INFO - Tanggal sistem: 2025-11-25 19:59:08
+2025-11-25 19:59:08,071 - INFO - Attempting database connection...
+2025-11-25 19:59:08,088 - INFO - Koneksi database berhasil - Total data existing: 1256
+2025-11-25 19:59:08,089 - INFO - Latest DB data: 2025-11-24 - $4091.90
+2025-11-25 19:59:08,090 - INFO - Fetching gold price data from Yahoo Finance...
+2025-11-25 19:59:08,091 - INFO - Periode: 2025-11-15 sampai 2025-11-25
+2025-11-25 19:59:08,091 - DEBUG - Entering history()
+2025-11-25 19:59:08,104 - DEBUG - ('CREATE TABLE IF NOT EXISTS "_tz_kv" ("key" VARCHAR(255) NOT NULL PRIMARY KEY, "value" VARCHAR(255)) WITHOUT ROWID', [])
+2025-11-25 19:59:08,105 - DEBUG - ('SELECT "t1"."key", "t1"."value" FROM "_tz_kv" AS "t1" WHERE ("t1"."key" = ?) LIMIT ? OFFSET ?', ['GC=F', 1, 0])
+2025-11-25 19:59:08,292 - DEBUG -  Entering history()
+2025-11-25 19:59:08,308 - DEBUG - GC=F: Yahoo GET parameters: {'period1': '2025-11-15 00:00:00-05:00', 'period2': '2025-11-25 00:00:00-05:00', 'interval': '1d', 'includePrePost': False, 'events': 'div,splits,capitalGains'}
+2025-11-25 19:59:08,309 - DEBUG -   Entering get()
+2025-11-25 19:59:08,309 - DEBUG -    Entering _make_request()
+2025-11-25 19:59:08,309 - DEBUG - url=https://query2.finance.yahoo.com/v8/finance/chart/GC=F
+2025-11-25 19:59:08,310 - DEBUG - params=frozendict.frozendict({'period1': 1763182800, 'period2': 1764046800, 'interval': '1d', 'includePrePost': False, 'events': 'div,splits,capitalGains'})
+2025-11-25 19:59:08,310 - DEBUG -     Entering _get_cookie_and_crumb()
+2025-11-25 19:59:08,310 - DEBUG - cookie_mode = 'basic'
+2025-11-25 19:59:08,310 - DEBUG -      Entering _get_cookie_and_crumb_basic()
+2025-11-25 19:59:08,310 - DEBUG -       Entering _get_cookie_basic()
+2025-11-25 19:59:08,310 - DEBUG -        Entering _load_cookie_curlCffi()
+2025-11-25 19:59:08,316 - DEBUG - ('CREATE TABLE IF NOT EXISTS "_cookieschema" ("strategy" VARCHAR(255) NOT NULL PRIMARY KEY, "fetch_date" DATETIME NOT NULL, "cookie_bytes" BLOB NOT NULL) WITHOUT ROWID', [])
+2025-11-25 19:59:08,317 - DEBUG - ('SELECT "t1"."strategy", "t1"."fetch_date", "t1"."cookie_bytes" FROM "_cookieschema" AS "t1" WHERE ("t1"."strategy" = ?) LIMIT ? OFFSET ?', ['curlCffi', 1, 0])
+2025-11-25 19:59:08,318 - DEBUG -        Exiting _load_cookie_curlCffi()
+2025-11-25 19:59:08,318 - DEBUG - reusing persistent cookie
+2025-11-25 19:59:08,318 - DEBUG -       Exiting _get_cookie_basic()
+2025-11-25 19:59:08,318 - DEBUG -       Entering _get_crumb_basic()
+2025-11-25 19:59:08,318 - DEBUG -        Entering _get_cookie_basic()
+2025-11-25 19:59:08,318 - DEBUG - reusing cookie
+2025-11-25 19:59:08,318 - DEBUG -        Exiting _get_cookie_basic()
+2025-11-25 19:59:08,871 - DEBUG - crumb = '5SvJvkxsg2O'
+2025-11-25 19:59:08,871 - DEBUG -       Exiting _get_crumb_basic()
+2025-11-25 19:59:08,872 - DEBUG -      Exiting _get_cookie_and_crumb_basic()
+2025-11-25 19:59:08,872 - DEBUG -     Exiting _get_cookie_and_crumb()
+2025-11-25 19:59:09,282 - DEBUG - response code=200
+2025-11-25 19:59:09,283 - DEBUG -    Exiting _make_request()
+2025-11-25 19:59:09,283 - DEBUG -   Exiting get()
+2025-11-25 19:59:09,326 - DEBUG - GC=F: yfinance received OHLC data: 2025-11-17 05:00:00 -> 2025-11-24 05:00:00
+2025-11-25 19:59:09,334 - DEBUG - GC=F: OHLC after cleaning: 2025-11-17 00:00:00-05:00 -> 2025-11-24 00:00:00-05:00
+2025-11-25 19:59:09,353 - DEBUG - GC=F: OHLC after combining events: 2025-11-17 00:00:00-05:00 -> 2025-11-24 00:00:00-05:00
+2025-11-25 19:59:09,371 - DEBUG - GC=F: yfinance returning OHLC: 2025-11-17 00:00:00-05:00 -> 2025-11-24 00:00:00-05:00
+2025-11-25 19:59:09,371 - DEBUG -  Exiting history()
+2025-11-25 19:59:09,371 - DEBUG - Exiting history()
+2025-11-25 19:59:09,371 - INFO - Berhasil mengambil 6 baris data
+2025-11-25 19:59:09,372 - INFO - Rentang: 2025-11-17 s/d 2025-11-24
+2025-11-25 19:59:09,372 - INFO - Harga terakhir: $4091.90 per troy ounce
+2025-11-25 19:59:09,372 - DEBUG - Last 3 data points from Yahoo Finance:
+2025-11-25 19:59:09,372 - DEBUG - 2025-11-24: $4091.90
+2025-11-25 19:59:09,373 - DEBUG - 2025-11-21: $4076.70
+2025-11-25 19:59:09,373 - DEBUG - 2025-11-20: $4056.50
+2025-11-25 19:59:09,373 - INFO - Starting database save operation...
+2025-11-25 19:59:09,373 - INFO - Attempting database connection...
+2025-11-25 19:59:09,382 - INFO - Koneksi database berhasil - Total data existing: 1256
+2025-11-25 19:59:09,384 - DEBUG - Check existing data for 2025-11-17: Found
+2025-11-25 19:59:09,385 - DEBUG - Skipped: 2025-11-17: Data sama, skip
+2025-11-25 19:59:09,386 - DEBUG - Check existing data for 2025-11-18: Found
+2025-11-25 19:59:09,386 - DEBUG - Skipped: 2025-11-18: Data sama, skip
+2025-11-25 19:59:09,388 - DEBUG - Check existing data for 2025-11-19: Found
+2025-11-25 19:59:09,388 - DEBUG - Skipped: 2025-11-19: Data sama, skip
+2025-11-25 19:59:09,389 - DEBUG - Check existing data for 2025-11-20: Found
+2025-11-25 19:59:09,389 - DEBUG - Skipped: 2025-11-20: Data sama, skip
+2025-11-25 19:59:09,390 - DEBUG - Check existing data for 2025-11-21: Found
+2025-11-25 19:59:09,390 - DEBUG - Skipped: 2025-11-21: Data sama, skip
+2025-11-25 19:59:09,391 - DEBUG - Check existing data for 2025-11-24: Found
+2025-11-25 19:59:09,392 - DEBUG - Skipped: 2025-11-24: Data sama, skip
+2025-11-25 19:59:09,393 - INFO - Database COMMIT successful!
+2025-11-25 19:59:09,393 - INFO - Summary: Saved: 0, Updated: 0, Skipped: 6, Errors: 0
+2025-11-25 19:59:09,394 - INFO - JSON Result: {"success": true, "saved": 0, "updated": 0, "skipped": 6, "errors": 0}
+2025-11-25 19:59:09,396 - INFO - Database connection closed
+2025-11-25 19:59:09,397 - INFO - Update completed successfully!
+2025-11-25 19:59:09,397 - INFO - ======================================================================
+2025-11-25 19:59:09,397 - INFO - Script execution finished
+2025-11-25 20:11:06,425 - INFO - Script execution started
+2025-11-25 20:11:06,427 - INFO - Command line arguments: ['C:\\laragon\\www\\prediksi-harga-emas\\python_scripts/update_data.py', 'today']
+2025-11-25 20:11:06,427 - INFO - ======================================================================
+2025-11-25 20:11:06,427 - INFO - Initializing GoldDataUpdater
+2025-11-25 20:11:06,428 - INFO - Python Version: 3.10.6 (tags/v3.10.6:9c7b4bd, Aug  1 2022, 21:53:49) [MSC v.1932 64 bit (AMD64)]
+2025-11-25 20:11:06,428 - INFO - Working Directory: C:\laragon\www\prediksi-harga-emas
+2025-11-25 20:11:06,428 - INFO - Script Directory: C:\laragon\www\prediksi-harga-emas\python_scripts
+2025-11-25 20:11:06,428 - INFO - Log File: C:\laragon\www\prediksi-harga-emas\python_scripts\logs\update_data_20251125.log
+2025-11-25 20:11:06,428 - DEBUG - Database Configuration:
+2025-11-25 20:11:06,428 - DEBUG - Host: 127.0.0.1
+2025-11-25 20:11:06,429 - DEBUG - Port: 3306
+2025-11-25 20:11:06,429 - DEBUG - Database: db_prediksi_emas
+2025-11-25 20:11:06,429 - DEBUG - User: root
+2025-11-25 20:11:06,429 - DEBUG - Password: (empty)
+2025-11-25 20:11:06,429 - INFO - Command received: today
+2025-11-25 20:11:06,429 - INFO - ======================================================================
+2025-11-25 20:11:06,429 - INFO - GOLD DATA UPDATER v2.1 - Update Started
+2025-11-25 20:11:06,429 - INFO - ======================================================================
+2025-11-25 20:11:06,429 - INFO - Tanggal sistem: 2025-11-25 20:11:06
+2025-11-25 20:11:06,429 - INFO - Attempting database connection...
+2025-11-25 20:11:06,445 - INFO - Koneksi database berhasil - Total data existing: 1256
+2025-11-25 20:11:06,446 - INFO - Latest DB data: 2025-11-24 - $4091.90
+2025-11-25 20:11:06,446 - INFO - Fetching gold price data from Yahoo Finance...
+2025-11-25 20:11:06,447 - INFO - Periode: 2025-11-15 sampai 2025-11-25
+2025-11-25 20:11:06,447 - DEBUG - Entering history()
+2025-11-25 20:11:06,456 - DEBUG - ('CREATE TABLE IF NOT EXISTS "_tz_kv" ("key" VARCHAR(255) NOT NULL PRIMARY KEY, "value" VARCHAR(255)) WITHOUT ROWID', [])
+2025-11-25 20:11:06,456 - DEBUG - ('SELECT "t1"."key", "t1"."value" FROM "_tz_kv" AS "t1" WHERE ("t1"."key" = ?) LIMIT ? OFFSET ?', ['GC=F', 1, 0])
+2025-11-25 20:11:06,587 - DEBUG -  Entering history()
+2025-11-25 20:11:06,601 - DEBUG - GC=F: Yahoo GET parameters: {'period1': '2025-11-15 00:00:00-05:00', 'period2': '2025-11-25 00:00:00-05:00', 'interval': '1d', 'includePrePost': False, 'events': 'div,splits,capitalGains'}
+2025-11-25 20:11:06,602 - DEBUG -   Entering get()
+2025-11-25 20:11:06,602 - DEBUG -    Entering _make_request()
+2025-11-25 20:11:06,602 - DEBUG - url=https://query2.finance.yahoo.com/v8/finance/chart/GC=F
+2025-11-25 20:11:06,603 - DEBUG - params=frozendict.frozendict({'period1': 1763182800, 'period2': 1764046800, 'interval': '1d', 'includePrePost': False, 'events': 'div,splits,capitalGains'})
+2025-11-25 20:11:06,603 - DEBUG -     Entering _get_cookie_and_crumb()
+2025-11-25 20:11:06,603 - DEBUG - cookie_mode = 'basic'
+2025-11-25 20:11:06,603 - DEBUG -      Entering _get_cookie_and_crumb_basic()
+2025-11-25 20:11:06,603 - DEBUG -       Entering _get_cookie_basic()
+2025-11-25 20:11:06,603 - DEBUG -        Entering _load_cookie_curlCffi()
+2025-11-25 20:11:06,606 - DEBUG - ('CREATE TABLE IF NOT EXISTS "_cookieschema" ("strategy" VARCHAR(255) NOT NULL PRIMARY KEY, "fetch_date" DATETIME NOT NULL, "cookie_bytes" BLOB NOT NULL) WITHOUT ROWID', [])
+2025-11-25 20:11:06,607 - DEBUG - ('SELECT "t1"."strategy", "t1"."fetch_date", "t1"."cookie_bytes" FROM "_cookieschema" AS "t1" WHERE ("t1"."strategy" = ?) LIMIT ? OFFSET ?', ['curlCffi', 1, 0])
+2025-11-25 20:11:06,607 - DEBUG -        Exiting _load_cookie_curlCffi()
+2025-11-25 20:11:06,608 - DEBUG - reusing persistent cookie
+2025-11-25 20:11:06,608 - DEBUG -       Exiting _get_cookie_basic()
+2025-11-25 20:11:06,608 - DEBUG -       Entering _get_crumb_basic()
+2025-11-25 20:11:06,608 - DEBUG -        Entering _get_cookie_basic()
+2025-11-25 20:11:06,608 - DEBUG - reusing cookie
+2025-11-25 20:11:06,609 - DEBUG -        Exiting _get_cookie_basic()
+2025-11-25 20:11:07,616 - DEBUG - crumb = '5SvJvkxsg2O'
+2025-11-25 20:11:07,616 - DEBUG -       Exiting _get_crumb_basic()
+2025-11-25 20:11:07,616 - DEBUG -      Exiting _get_cookie_and_crumb_basic()
+2025-11-25 20:11:07,616 - DEBUG -     Exiting _get_cookie_and_crumb()
+2025-11-25 20:11:08,002 - DEBUG - response code=200
+2025-11-25 20:11:08,003 - DEBUG -    Exiting _make_request()
+2025-11-25 20:11:08,004 - DEBUG -   Exiting get()
+2025-11-25 20:11:08,050 - DEBUG - GC=F: yfinance received OHLC data: 2025-11-17 05:00:00 -> 2025-11-24 05:00:00
+2025-11-25 20:11:08,056 - DEBUG - GC=F: OHLC after cleaning: 2025-11-17 00:00:00-05:00 -> 2025-11-24 00:00:00-05:00
+2025-11-25 20:11:08,078 - DEBUG - GC=F: OHLC after combining events: 2025-11-17 00:00:00-05:00 -> 2025-11-24 00:00:00-05:00
+2025-11-25 20:11:08,098 - DEBUG - GC=F: yfinance returning OHLC: 2025-11-17 00:00:00-05:00 -> 2025-11-24 00:00:00-05:00
+2025-11-25 20:11:08,099 - DEBUG -  Exiting history()
+2025-11-25 20:11:08,099 - DEBUG - Exiting history()
+2025-11-25 20:11:08,099 - INFO - Berhasil mengambil 6 baris data
+2025-11-25 20:11:08,099 - INFO - Rentang: 2025-11-17 s/d 2025-11-24
+2025-11-25 20:11:08,099 - INFO - Harga terakhir: $4091.90 per troy ounce
+2025-11-25 20:11:08,100 - DEBUG - Last 3 data points from Yahoo Finance:
+2025-11-25 20:11:08,100 - DEBUG - 2025-11-24: $4091.90
+2025-11-25 20:11:08,100 - DEBUG - 2025-11-21: $4076.70
+2025-11-25 20:11:08,100 - DEBUG - 2025-11-20: $4056.50
+2025-11-25 20:11:08,100 - INFO - Starting database save operation...
+2025-11-25 20:11:08,101 - INFO - Attempting database connection...
+2025-11-25 20:11:08,118 - INFO - Koneksi database berhasil - Total data existing: 1256
+2025-11-25 20:11:08,121 - DEBUG - Check existing data for 2025-11-17: Found
+2025-11-25 20:11:08,121 - DEBUG - Skipped: 2025-11-17: Data sama, skip
+2025-11-25 20:11:08,123 - DEBUG - Check existing data for 2025-11-18: Found
+2025-11-25 20:11:08,123 - DEBUG - Skipped: 2025-11-18: Data sama, skip
+2025-11-25 20:11:08,125 - DEBUG - Check existing data for 2025-11-19: Found
+2025-11-25 20:11:08,126 - DEBUG - Skipped: 2025-11-19: Data sama, skip
+2025-11-25 20:11:08,128 - DEBUG - Check existing data for 2025-11-20: Found
+2025-11-25 20:11:08,129 - DEBUG - Skipped: 2025-11-20: Data sama, skip
+2025-11-25 20:11:08,130 - DEBUG - Check existing data for 2025-11-21: Found
+2025-11-25 20:11:08,131 - DEBUG - Skipped: 2025-11-21: Data sama, skip
+2025-11-25 20:11:08,132 - DEBUG - Check existing data for 2025-11-24: Found
+2025-11-25 20:11:08,132 - DEBUG - Skipped: 2025-11-24: Data sama, skip
+2025-11-25 20:11:08,133 - INFO - Database COMMIT successful!
+2025-11-25 20:11:08,134 - INFO - Summary: Saved: 0, Updated: 0, Skipped: 6, Errors: 0
+2025-11-25 20:11:08,134 - INFO - JSON Result: {"success": true, "saved": 0, "updated": 0, "skipped": 6, "errors": 0}
+2025-11-25 20:11:08,134 - INFO - Database connection closed
+2025-11-25 20:11:08,134 - INFO - Update completed successfully!
+2025-11-25 20:11:08,135 - INFO - ======================================================================
+2025-11-25 20:11:08,135 - INFO - Script execution finished
+2025-11-25 20:11:39,979 - INFO - Script execution started
+2025-11-25 20:11:39,980 - INFO - Command line arguments: ['C:\\laragon\\www\\prediksi-harga-emas\\python_scripts/update_data.py', 'today']
+2025-11-25 20:11:39,980 - INFO - ======================================================================
+2025-11-25 20:11:39,980 - INFO - Initializing GoldDataUpdater
+2025-11-25 20:11:39,980 - INFO - Python Version: 3.10.6 (tags/v3.10.6:9c7b4bd, Aug  1 2022, 21:53:49) [MSC v.1932 64 bit (AMD64)]
+2025-11-25 20:11:39,980 - INFO - Working Directory: C:\laragon\www\prediksi-harga-emas
+2025-11-25 20:11:39,980 - INFO - Script Directory: C:\laragon\www\prediksi-harga-emas\python_scripts
+2025-11-25 20:11:39,980 - INFO - Log File: C:\laragon\www\prediksi-harga-emas\python_scripts\logs\update_data_20251125.log
+2025-11-25 20:11:39,980 - DEBUG - Database Configuration:
+2025-11-25 20:11:39,980 - DEBUG - Host: 127.0.0.1
+2025-11-25 20:11:39,980 - DEBUG - Port: 3306
+2025-11-25 20:11:39,980 - DEBUG - Database: db_prediksi_emas
+2025-11-25 20:11:39,981 - DEBUG - User: root
+2025-11-25 20:11:39,981 - DEBUG - Password: (empty)
+2025-11-25 20:11:39,981 - INFO - Command received: today
+2025-11-25 20:11:39,981 - INFO - ======================================================================
+2025-11-25 20:11:39,981 - INFO - GOLD DATA UPDATER v2.1 - Update Started
+2025-11-25 20:11:39,981 - INFO - ======================================================================
+2025-11-25 20:11:39,981 - INFO - Tanggal sistem: 2025-11-25 20:11:39
+2025-11-25 20:11:39,981 - INFO - Attempting database connection...
+2025-11-25 20:11:40,026 - INFO - Koneksi database berhasil - Total data existing: 1255
+2025-11-25 20:11:40,027 - INFO - Latest DB data: 2025-11-21 - $4076.70
+2025-11-25 20:11:40,027 - INFO - Fetching gold price data from Yahoo Finance...
+2025-11-25 20:11:40,028 - INFO - Periode: 2025-11-15 sampai 2025-11-25
+2025-11-25 20:11:40,028 - DEBUG - Entering history()
+2025-11-25 20:11:40,032 - DEBUG - ('CREATE TABLE IF NOT EXISTS "_tz_kv" ("key" VARCHAR(255) NOT NULL PRIMARY KEY, "value" VARCHAR(255)) WITHOUT ROWID', [])
+2025-11-25 20:11:40,032 - DEBUG - ('SELECT "t1"."key", "t1"."value" FROM "_tz_kv" AS "t1" WHERE ("t1"."key" = ?) LIMIT ? OFFSET ?', ['GC=F', 1, 0])
+2025-11-25 20:11:40,154 - DEBUG -  Entering history()
+2025-11-25 20:11:40,164 - DEBUG - GC=F: Yahoo GET parameters: {'period1': '2025-11-15 00:00:00-05:00', 'period2': '2025-11-25 00:00:00-05:00', 'interval': '1d', 'includePrePost': False, 'events': 'div,splits,capitalGains'}
+2025-11-25 20:11:40,164 - DEBUG -   Entering get()
+2025-11-25 20:11:40,164 - DEBUG -    Entering _make_request()
+2025-11-25 20:11:40,165 - DEBUG - url=https://query2.finance.yahoo.com/v8/finance/chart/GC=F
+2025-11-25 20:11:40,165 - DEBUG - params=frozendict.frozendict({'period1': 1763182800, 'period2': 1764046800, 'interval': '1d', 'includePrePost': False, 'events': 'div,splits,capitalGains'})
+2025-11-25 20:11:40,165 - DEBUG -     Entering _get_cookie_and_crumb()
+2025-11-25 20:11:40,165 - DEBUG - cookie_mode = 'basic'
+2025-11-25 20:11:40,165 - DEBUG -      Entering _get_cookie_and_crumb_basic()
+2025-11-25 20:11:40,165 - DEBUG -       Entering _get_cookie_basic()
+2025-11-25 20:11:40,165 - DEBUG -        Entering _load_cookie_curlCffi()
+2025-11-25 20:11:40,168 - DEBUG - ('CREATE TABLE IF NOT EXISTS "_cookieschema" ("strategy" VARCHAR(255) NOT NULL PRIMARY KEY, "fetch_date" DATETIME NOT NULL, "cookie_bytes" BLOB NOT NULL) WITHOUT ROWID', [])
+2025-11-25 20:11:40,169 - DEBUG - ('SELECT "t1"."strategy", "t1"."fetch_date", "t1"."cookie_bytes" FROM "_cookieschema" AS "t1" WHERE ("t1"."strategy" = ?) LIMIT ? OFFSET ?', ['curlCffi', 1, 0])
+2025-11-25 20:11:40,169 - DEBUG -        Exiting _load_cookie_curlCffi()
+2025-11-25 20:11:40,169 - DEBUG - reusing persistent cookie
+2025-11-25 20:11:40,170 - DEBUG -       Exiting _get_cookie_basic()
+2025-11-25 20:11:40,170 - DEBUG -       Entering _get_crumb_basic()
+2025-11-25 20:11:40,170 - DEBUG -        Entering _get_cookie_basic()
+2025-11-25 20:11:40,170 - DEBUG - reusing cookie
+2025-11-25 20:11:40,170 - DEBUG -        Exiting _get_cookie_basic()
+2025-11-25 20:11:55,951 - DEBUG - crumb = '5SvJvkxsg2O'
+2025-11-25 20:11:55,952 - DEBUG -       Exiting _get_crumb_basic()
+2025-11-25 20:11:55,952 - DEBUG -      Exiting _get_cookie_and_crumb_basic()
+2025-11-25 20:11:55,952 - DEBUG -     Exiting _get_cookie_and_crumb()
+2025-11-25 20:11:56,376 - DEBUG - response code=200
+2025-11-25 20:11:56,377 - DEBUG -    Exiting _make_request()
+2025-11-25 20:11:56,377 - DEBUG -   Exiting get()
+2025-11-25 20:11:56,385 - DEBUG - GC=F: yfinance received OHLC data: 2025-11-17 05:00:00 -> 2025-11-24 05:00:00
+2025-11-25 20:11:56,393 - DEBUG - GC=F: OHLC after cleaning: 2025-11-17 00:00:00-05:00 -> 2025-11-24 00:00:00-05:00
+2025-11-25 20:11:56,417 - DEBUG - GC=F: OHLC after combining events: 2025-11-17 00:00:00-05:00 -> 2025-11-24 00:00:00-05:00
+2025-11-25 20:11:56,429 - DEBUG - GC=F: yfinance returning OHLC: 2025-11-17 00:00:00-05:00 -> 2025-11-24 00:00:00-05:00
+2025-11-25 20:11:56,429 - DEBUG -  Exiting history()
+2025-11-25 20:11:56,429 - DEBUG - Exiting history()
+2025-11-25 20:11:56,429 - INFO - Berhasil mengambil 6 baris data
+2025-11-25 20:11:56,430 - INFO - Rentang: 2025-11-17 s/d 2025-11-24
+2025-11-25 20:11:56,430 - INFO - Harga terakhir: $4091.90 per troy ounce
+2025-11-25 20:11:56,430 - DEBUG - Last 3 data points from Yahoo Finance:
+2025-11-25 20:11:56,430 - DEBUG - 2025-11-24: $4091.90
+2025-11-25 20:11:56,430 - DEBUG - 2025-11-21: $4076.70
+2025-11-25 20:11:56,430 - DEBUG - 2025-11-20: $4056.50
+2025-11-25 20:11:56,431 - INFO - Starting database save operation...
+2025-11-25 20:11:56,431 - INFO - Attempting database connection...
+2025-11-25 20:11:56,444 - INFO - Koneksi database berhasil - Total data existing: 1255
+2025-11-25 20:11:56,447 - DEBUG - Check existing data for 2025-11-17: Found
+2025-11-25 20:11:56,448 - DEBUG - Skipped: 2025-11-17: Data sama, skip
+2025-11-25 20:11:56,449 - DEBUG - Check existing data for 2025-11-18: Found
+2025-11-25 20:11:56,449 - DEBUG - Skipped: 2025-11-18: Data sama, skip
+2025-11-25 20:11:56,451 - DEBUG - Check existing data for 2025-11-19: Found
+2025-11-25 20:11:56,451 - DEBUG - Skipped: 2025-11-19: Data sama, skip
+2025-11-25 20:11:56,452 - DEBUG - Check existing data for 2025-11-20: Found
+2025-11-25 20:11:56,453 - DEBUG - Skipped: 2025-11-20: Data sama, skip
+2025-11-25 20:11:56,454 - DEBUG - Check existing data for 2025-11-21: Found
+2025-11-25 20:11:56,455 - DEBUG - Skipped: 2025-11-21: Data sama, skip
+2025-11-25 20:11:56,458 - DEBUG - Check existing data for 2025-11-24: Not found
+2025-11-25 20:11:56,459 - DEBUG - Executing query for 2025-11-24: USD $4091.9, IDR Rp2199626.5
+2025-11-25 20:11:56,465 - INFO - Inserted: 2025-11-24
+2025-11-25 20:11:56,468 - INFO - Database COMMIT successful!
+2025-11-25 20:11:56,468 - INFO - Summary: Saved: 1, Updated: 0, Skipped: 5, Errors: 0
+2025-11-25 20:11:56,468 - INFO - JSON Result: {"success": true, "saved": 1, "updated": 0, "skipped": 5, "errors": 0}
+2025-11-25 20:11:56,469 - INFO - Database connection closed
+2025-11-25 20:11:56,469 - INFO - Update completed successfully!
+2025-11-25 20:11:56,469 - INFO - ======================================================================
+2025-11-25 20:11:56,469 - INFO - Script execution finished
+2025-11-25 20:12:46,907 - INFO - Script execution started
+2025-11-25 20:12:46,908 - INFO - Command line arguments: ['C:\\laragon\\www\\prediksi-harga-emas\\python_scripts/update_data.py', 'historical', '5']
+2025-11-25 20:12:46,908 - INFO - ======================================================================
+2025-11-25 20:12:46,908 - INFO - Initializing GoldDataUpdater
+2025-11-25 20:12:46,908 - INFO - Python Version: 3.10.6 (tags/v3.10.6:9c7b4bd, Aug  1 2022, 21:53:49) [MSC v.1932 64 bit (AMD64)]
+2025-11-25 20:12:46,908 - INFO - Working Directory: C:\laragon\www\prediksi-harga-emas\public
+2025-11-25 20:12:46,908 - INFO - Script Directory: C:\laragon\www\prediksi-harga-emas\python_scripts
+2025-11-25 20:12:46,908 - INFO - Log File: C:\laragon\www\prediksi-harga-emas\python_scripts\logs\update_data_20251125.log
+2025-11-25 20:12:46,908 - DEBUG - Database Configuration:
+2025-11-25 20:12:46,908 - DEBUG - Host: 127.0.0.1
+2025-11-25 20:12:46,909 - DEBUG - Port: 3306
+2025-11-25 20:12:46,909 - DEBUG - Database: db_prediksi_emas
+2025-11-25 20:12:46,909 - DEBUG - User: root
+2025-11-25 20:12:46,909 - DEBUG - Password: (empty)
+2025-11-25 20:12:46,909 - INFO - Command received: historical
+2025-11-25 20:12:46,909 - ERROR - Unknown command: historical
+2025-11-25 20:12:46,909 - INFO - Script execution finished
+2025-11-25 20:13:08,389 - INFO - Script execution started
+2025-11-25 20:13:08,390 - INFO - Command line arguments: ['C:\\laragon\\www\\prediksi-harga-emas\\python_scripts/update_data.py', 'today']
+2025-11-25 20:13:08,390 - INFO - ======================================================================
+2025-11-25 20:13:08,390 - INFO - Initializing GoldDataUpdater
+2025-11-25 20:13:08,390 - INFO - Python Version: 3.10.6 (tags/v3.10.6:9c7b4bd, Aug  1 2022, 21:53:49) [MSC v.1932 64 bit (AMD64)]
+2025-11-25 20:13:08,390 - INFO - Working Directory: C:\laragon\www\prediksi-harga-emas
+2025-11-25 20:13:08,390 - INFO - Script Directory: C:\laragon\www\prediksi-harga-emas\python_scripts
+2025-11-25 20:13:08,390 - INFO - Log File: C:\laragon\www\prediksi-harga-emas\python_scripts\logs\update_data_20251125.log
+2025-11-25 20:13:08,390 - DEBUG - Database Configuration:
+2025-11-25 20:13:08,390 - DEBUG - Host: 127.0.0.1
+2025-11-25 20:13:08,391 - DEBUG - Port: 3306
+2025-11-25 20:13:08,391 - DEBUG - Database: db_prediksi_emas
+2025-11-25 20:13:08,391 - DEBUG - User: root
+2025-11-25 20:13:08,391 - DEBUG - Password: (empty)
+2025-11-25 20:13:08,391 - INFO - Command received: today
+2025-11-25 20:13:08,391 - INFO - ======================================================================
+2025-11-25 20:13:08,391 - INFO - GOLD DATA UPDATER v2.1 - Update Started
+2025-11-25 20:13:08,391 - INFO - ======================================================================
+2025-11-25 20:13:08,391 - INFO - Tanggal sistem: 2025-11-25 20:13:08
+2025-11-25 20:13:08,391 - INFO - Attempting database connection...
+2025-11-25 20:13:08,418 - INFO - Koneksi database berhasil - Total data existing: 1255
+2025-11-25 20:13:08,420 - INFO - Latest DB data: 2025-11-21 - $4076.70
+2025-11-25 20:13:08,420 - INFO - Fetching gold price data from Yahoo Finance...
+2025-11-25 20:13:08,421 - INFO - Periode: 2025-11-15 sampai 2025-11-25
+2025-11-25 20:13:08,421 - DEBUG - Entering history()
+2025-11-25 20:13:08,425 - DEBUG - ('CREATE TABLE IF NOT EXISTS "_tz_kv" ("key" VARCHAR(255) NOT NULL PRIMARY KEY, "value" VARCHAR(255)) WITHOUT ROWID', [])
+2025-11-25 20:13:08,425 - DEBUG - ('SELECT "t1"."key", "t1"."value" FROM "_tz_kv" AS "t1" WHERE ("t1"."key" = ?) LIMIT ? OFFSET ?', ['GC=F', 1, 0])
+2025-11-25 20:13:08,552 - DEBUG -  Entering history()
+2025-11-25 20:13:08,558 - DEBUG - GC=F: Yahoo GET parameters: {'period1': '2025-11-15 00:00:00-05:00', 'period2': '2025-11-25 00:00:00-05:00', 'interval': '1d', 'includePrePost': False, 'events': 'div,splits,capitalGains'}
+2025-11-25 20:13:08,558 - DEBUG -   Entering get()
+2025-11-25 20:13:08,558 - DEBUG -    Entering _make_request()
+2025-11-25 20:13:08,559 - DEBUG - url=https://query2.finance.yahoo.com/v8/finance/chart/GC=F
+2025-11-25 20:13:08,559 - DEBUG - params=frozendict.frozendict({'period1': 1763182800, 'period2': 1764046800, 'interval': '1d', 'includePrePost': False, 'events': 'div,splits,capitalGains'})
+2025-11-25 20:13:08,559 - DEBUG -     Entering _get_cookie_and_crumb()
+2025-11-25 20:13:08,559 - DEBUG - cookie_mode = 'basic'
+2025-11-25 20:13:08,559 - DEBUG -      Entering _get_cookie_and_crumb_basic()
+2025-11-25 20:13:08,559 - DEBUG -       Entering _get_cookie_basic()
+2025-11-25 20:13:08,559 - DEBUG -        Entering _load_cookie_curlCffi()
+2025-11-25 20:13:08,562 - DEBUG - ('CREATE TABLE IF NOT EXISTS "_cookieschema" ("strategy" VARCHAR(255) NOT NULL PRIMARY KEY, "fetch_date" DATETIME NOT NULL, "cookie_bytes" BLOB NOT NULL) WITHOUT ROWID', [])
+2025-11-25 20:13:08,562 - DEBUG - ('SELECT "t1"."strategy", "t1"."fetch_date", "t1"."cookie_bytes" FROM "_cookieschema" AS "t1" WHERE ("t1"."strategy" = ?) LIMIT ? OFFSET ?', ['curlCffi', 1, 0])
+2025-11-25 20:13:08,563 - DEBUG -        Exiting _load_cookie_curlCffi()
+2025-11-25 20:13:08,563 - DEBUG - reusing persistent cookie
+2025-11-25 20:13:08,563 - DEBUG -       Exiting _get_cookie_basic()
+2025-11-25 20:13:08,563 - DEBUG -       Entering _get_crumb_basic()
+2025-11-25 20:13:08,563 - DEBUG -        Entering _get_cookie_basic()
+2025-11-25 20:13:08,563 - DEBUG - reusing cookie
+2025-11-25 20:13:08,563 - DEBUG -        Exiting _get_cookie_basic()
+2025-11-25 20:13:38,574 - ERROR - $GC=F: possibly delisted; no price data found  (1d 2025-11-15 -> 2025-11-25)
+2025-11-25 20:13:38,574 - DEBUG -  Exiting history()
+2025-11-25 20:13:38,575 - DEBUG - Exiting history()
+2025-11-25 20:13:38,575 - ERROR - Tidak ada data yang ditemukan dari Yahoo Finance
+2025-11-25 20:13:38,575 - ERROR - Tidak ada data dari Yahoo Finance
+2025-11-25 20:13:38,575 - INFO - Script execution finished
+2025-11-25 20:13:48,544 - INFO - Script execution started
+2025-11-25 20:13:48,544 - INFO - Command line arguments: ['C:\\laragon\\www\\prediksi-harga-emas\\python_scripts/update_data.py', 'today']
+2025-11-25 20:13:48,544 - INFO - ======================================================================
+2025-11-25 20:13:48,544 - INFO - Initializing GoldDataUpdater
+2025-11-25 20:13:48,544 - INFO - Python Version: 3.10.6 (tags/v3.10.6:9c7b4bd, Aug  1 2022, 21:53:49) [MSC v.1932 64 bit (AMD64)]
+2025-11-25 20:13:48,544 - INFO - Working Directory: C:\laragon\www\prediksi-harga-emas
+2025-11-25 20:13:48,544 - INFO - Script Directory: C:\laragon\www\prediksi-harga-emas\python_scripts
+2025-11-25 20:13:48,545 - INFO - Log File: C:\laragon\www\prediksi-harga-emas\python_scripts\logs\update_data_20251125.log
+2025-11-25 20:13:48,545 - DEBUG - Database Configuration:
+2025-11-25 20:13:48,545 - DEBUG - Host: 127.0.0.1
+2025-11-25 20:13:48,545 - DEBUG - Port: 3306
+2025-11-25 20:13:48,545 - DEBUG - Database: db_prediksi_emas
+2025-11-25 20:13:48,545 - DEBUG - User: root
+2025-11-25 20:13:48,545 - DEBUG - Password: (empty)
+2025-11-25 20:13:48,545 - INFO - Command received: today
+2025-11-25 20:13:48,545 - INFO - ======================================================================
+2025-11-25 20:13:48,545 - INFO - GOLD DATA UPDATER v2.1 - Update Started
+2025-11-25 20:13:48,545 - INFO - ======================================================================
+2025-11-25 20:13:48,545 - INFO - Tanggal sistem: 2025-11-25 20:13:48
+2025-11-25 20:13:48,546 - INFO - Attempting database connection...
+2025-11-25 20:13:48,557 - INFO - Koneksi database berhasil - Total data existing: 1255
+2025-11-25 20:13:48,558 - INFO - Latest DB data: 2025-11-21 - $4076.70
+2025-11-25 20:13:48,558 - INFO - Fetching gold price data from Yahoo Finance...
+2025-11-25 20:13:48,559 - INFO - Periode: 2025-11-15 sampai 2025-11-25
+2025-11-25 20:13:48,559 - DEBUG - Entering history()
+2025-11-25 20:13:48,562 - DEBUG - ('CREATE TABLE IF NOT EXISTS "_tz_kv" ("key" VARCHAR(255) NOT NULL PRIMARY KEY, "value" VARCHAR(255)) WITHOUT ROWID', [])
+2025-11-25 20:13:48,563 - DEBUG - ('SELECT "t1"."key", "t1"."value" FROM "_tz_kv" AS "t1" WHERE ("t1"."key" = ?) LIMIT ? OFFSET ?', ['GC=F', 1, 0])
+2025-11-25 20:13:48,690 - DEBUG -  Entering history()
+2025-11-25 20:13:48,695 - DEBUG - GC=F: Yahoo GET parameters: {'period1': '2025-11-15 00:00:00-05:00', 'period2': '2025-11-25 00:00:00-05:00', 'interval': '1d', 'includePrePost': False, 'events': 'div,splits,capitalGains'}
+2025-11-25 20:13:48,696 - DEBUG -   Entering get()
+2025-11-25 20:13:48,696 - DEBUG -    Entering _make_request()
+2025-11-25 20:13:48,696 - DEBUG - url=https://query2.finance.yahoo.com/v8/finance/chart/GC=F
+2025-11-25 20:13:48,696 - DEBUG - params=frozendict.frozendict({'period1': 1763182800, 'period2': 1764046800, 'interval': '1d', 'includePrePost': False, 'events': 'div,splits,capitalGains'})
+2025-11-25 20:13:48,696 - DEBUG -     Entering _get_cookie_and_crumb()
+2025-11-25 20:13:48,696 - DEBUG - cookie_mode = 'basic'
+2025-11-25 20:13:48,696 - DEBUG -      Entering _get_cookie_and_crumb_basic()
+2025-11-25 20:13:48,696 - DEBUG -       Entering _get_cookie_basic()
+2025-11-25 20:13:48,696 - DEBUG -        Entering _load_cookie_curlCffi()
+2025-11-25 20:13:48,702 - DEBUG - ('CREATE TABLE IF NOT EXISTS "_cookieschema" ("strategy" VARCHAR(255) NOT NULL PRIMARY KEY, "fetch_date" DATETIME NOT NULL, "cookie_bytes" BLOB NOT NULL) WITHOUT ROWID', [])
+2025-11-25 20:13:48,703 - DEBUG - ('SELECT "t1"."strategy", "t1"."fetch_date", "t1"."cookie_bytes" FROM "_cookieschema" AS "t1" WHERE ("t1"."strategy" = ?) LIMIT ? OFFSET ?', ['curlCffi', 1, 0])
+2025-11-25 20:13:48,703 - DEBUG -        Exiting _load_cookie_curlCffi()
+2025-11-25 20:13:48,703 - DEBUG - reusing persistent cookie
+2025-11-25 20:13:48,703 - DEBUG -       Exiting _get_cookie_basic()
+2025-11-25 20:13:48,703 - DEBUG -       Entering _get_crumb_basic()
+2025-11-25 20:13:48,704 - DEBUG -        Entering _get_cookie_basic()
+2025-11-25 20:13:48,704 - DEBUG - reusing cookie
+2025-11-25 20:13:48,704 - DEBUG -        Exiting _get_cookie_basic()
+2025-11-25 20:13:49,928 - DEBUG - crumb = '5SvJvkxsg2O'
+2025-11-25 20:13:49,928 - DEBUG -       Exiting _get_crumb_basic()
+2025-11-25 20:13:49,929 - DEBUG -      Exiting _get_cookie_and_crumb_basic()
+2025-11-25 20:13:49,929 - DEBUG -     Exiting _get_cookie_and_crumb()
+2025-11-25 20:13:50,546 - DEBUG - response code=200
+2025-11-25 20:13:50,548 - DEBUG -    Exiting _make_request()
+2025-11-25 20:13:50,549 - DEBUG -   Exiting get()
+2025-11-25 20:13:50,558 - DEBUG - GC=F: yfinance received OHLC data: 2025-11-17 05:00:00 -> 2025-11-24 05:00:00
+2025-11-25 20:13:50,561 - DEBUG - GC=F: OHLC after cleaning: 2025-11-17 00:00:00-05:00 -> 2025-11-24 00:00:00-05:00
+2025-11-25 20:13:50,584 - DEBUG - GC=F: OHLC after combining events: 2025-11-17 00:00:00-05:00 -> 2025-11-24 00:00:00-05:00
+2025-11-25 20:13:50,605 - DEBUG - GC=F: yfinance returning OHLC: 2025-11-17 00:00:00-05:00 -> 2025-11-24 00:00:00-05:00
+2025-11-25 20:13:50,606 - DEBUG -  Exiting history()
+2025-11-25 20:13:50,606 - DEBUG - Exiting history()
+2025-11-25 20:13:50,606 - INFO - Berhasil mengambil 6 baris data
+2025-11-25 20:13:50,607 - INFO - Rentang: 2025-11-17 s/d 2025-11-24
+2025-11-25 20:13:50,607 - INFO - Harga terakhir: $4091.90 per troy ounce
+2025-11-25 20:13:50,607 - DEBUG - Last 3 data points from Yahoo Finance:
+2025-11-25 20:13:50,608 - DEBUG - 2025-11-24: $4091.90
+2025-11-25 20:13:50,608 - DEBUG - 2025-11-21: $4076.70
+2025-11-25 20:13:50,609 - DEBUG - 2025-11-20: $4056.50
+2025-11-25 20:13:50,609 - INFO - Starting database save operation...
+2025-11-25 20:13:50,609 - INFO - Attempting database connection...
+2025-11-25 20:13:50,624 - INFO - Koneksi database berhasil - Total data existing: 1255
+2025-11-25 20:13:50,627 - DEBUG - Check existing data for 2025-11-17: Found
+2025-11-25 20:13:50,628 - DEBUG - Skipped: 2025-11-17: Data sama, skip
+2025-11-25 20:13:50,631 - DEBUG - Check existing data for 2025-11-18: Found
+2025-11-25 20:13:50,632 - DEBUG - Skipped: 2025-11-18: Data sama, skip
+2025-11-25 20:13:50,633 - DEBUG - Check existing data for 2025-11-19: Found
+2025-11-25 20:13:50,634 - DEBUG - Skipped: 2025-11-19: Data sama, skip
+2025-11-25 20:13:50,635 - DEBUG - Check existing data for 2025-11-20: Found
+2025-11-25 20:13:50,635 - DEBUG - Skipped: 2025-11-20: Data sama, skip
+2025-11-25 20:13:50,636 - DEBUG - Check existing data for 2025-11-21: Found
+2025-11-25 20:13:50,636 - DEBUG - Skipped: 2025-11-21: Data sama, skip
+2025-11-25 20:13:50,637 - DEBUG - Check existing data for 2025-11-24: Not found
+2025-11-25 20:13:50,637 - DEBUG - Executing query for 2025-11-24: USD $4091.9, IDR Rp2199626.5
+2025-11-25 20:13:50,639 - INFO - Inserted: 2025-11-24
+2025-11-25 20:13:50,642 - INFO - Database COMMIT successful!
+2025-11-25 20:13:50,642 - INFO - Summary: Saved: 1, Updated: 0, Skipped: 5, Errors: 0
+2025-11-25 20:13:50,642 - INFO - JSON Result: {"success": true, "saved": 1, "updated": 0, "skipped": 5, "errors": 0}
+2025-11-25 20:13:50,643 - INFO - Database connection closed
+2025-11-25 20:13:50,643 - INFO - Update completed successfully!
+2025-11-25 20:13:50,643 - INFO - ======================================================================
+2025-11-25 20:13:50,643 - INFO - Script execution finished
+2025-11-25 20:19:49,869 - INFO - Script execution started
+2025-11-25 20:19:49,869 - INFO - Command line arguments: ['C:\\laragon\\www\\prediksi-harga-emas\\python_scripts/update_data.py', 'today']
+2025-11-25 20:19:49,870 - INFO - ======================================================================
+2025-11-25 20:19:49,870 - INFO - Initializing GoldDataUpdater
+2025-11-25 20:19:49,870 - INFO - Python Version: 3.10.6 (tags/v3.10.6:9c7b4bd, Aug  1 2022, 21:53:49) [MSC v.1932 64 bit (AMD64)]
+2025-11-25 20:19:49,872 - INFO - Working Directory: C:\laragon\www\prediksi-harga-emas
+2025-11-25 20:19:49,872 - INFO - Script Directory: C:\laragon\www\prediksi-harga-emas\python_scripts
+2025-11-25 20:19:49,872 - INFO - Log File: C:\laragon\www\prediksi-harga-emas\python_scripts\logs\update_data_20251125.log
+2025-11-25 20:19:49,873 - DEBUG - Database Configuration:
+2025-11-25 20:19:49,873 - DEBUG - Host: 127.0.0.1
+2025-11-25 20:19:49,873 - DEBUG - Port: 3306
+2025-11-25 20:19:49,873 - DEBUG - Database: db_prediksi_emas
+2025-11-25 20:19:49,873 - DEBUG - User: root
+2025-11-25 20:19:49,873 - DEBUG - Password: (empty)
+2025-11-25 20:19:49,873 - INFO - Command received: today
+2025-11-25 20:19:49,873 - INFO - ======================================================================
+2025-11-25 20:19:49,873 - INFO - GOLD DATA UPDATER v2.1 - Update Started
+2025-11-25 20:19:49,873 - INFO - ======================================================================
+2025-11-25 20:19:49,873 - INFO - Tanggal sistem: 2025-11-25 20:19:49
+2025-11-25 20:19:49,873 - INFO - Attempting database connection...
+2025-11-25 20:19:49,916 - INFO - Koneksi database berhasil - Total data existing: 1256
+2025-11-25 20:19:49,917 - INFO - Latest DB data: 2025-11-24 - $4091.90
+2025-11-25 20:19:49,918 - INFO - Fetching gold price data from Yahoo Finance...
+2025-11-25 20:19:49,918 - INFO - Periode: 2025-11-15 sampai 2025-11-25
+2025-11-25 20:19:49,918 - DEBUG - Entering history()
+2025-11-25 20:19:49,929 - DEBUG - ('CREATE TABLE IF NOT EXISTS "_tz_kv" ("key" VARCHAR(255) NOT NULL PRIMARY KEY, "value" VARCHAR(255)) WITHOUT ROWID', [])
+2025-11-25 20:19:49,930 - DEBUG - ('SELECT "t1"."key", "t1"."value" FROM "_tz_kv" AS "t1" WHERE ("t1"."key" = ?) LIMIT ? OFFSET ?', ['GC=F', 1, 0])
+2025-11-25 20:19:50,068 - DEBUG -  Entering history()
+2025-11-25 20:19:50,083 - DEBUG - GC=F: Yahoo GET parameters: {'period1': '2025-11-15 00:00:00-05:00', 'period2': '2025-11-25 00:00:00-05:00', 'interval': '1d', 'includePrePost': False, 'events': 'div,splits,capitalGains'}
+2025-11-25 20:19:50,085 - DEBUG -   Entering get()
+2025-11-25 20:19:50,085 - DEBUG -    Entering _make_request()
+2025-11-25 20:19:50,085 - DEBUG - url=https://query2.finance.yahoo.com/v8/finance/chart/GC=F
+2025-11-25 20:19:50,085 - DEBUG - params=frozendict.frozendict({'period1': 1763182800, 'period2': 1764046800, 'interval': '1d', 'includePrePost': False, 'events': 'div,splits,capitalGains'})
+2025-11-25 20:19:50,085 - DEBUG -     Entering _get_cookie_and_crumb()
+2025-11-25 20:19:50,085 - DEBUG - cookie_mode = 'basic'
+2025-11-25 20:19:50,085 - DEBUG -      Entering _get_cookie_and_crumb_basic()
+2025-11-25 20:19:50,086 - DEBUG -       Entering _get_cookie_basic()
+2025-11-25 20:19:50,086 - DEBUG -        Entering _load_cookie_curlCffi()
+2025-11-25 20:19:50,093 - DEBUG - ('CREATE TABLE IF NOT EXISTS "_cookieschema" ("strategy" VARCHAR(255) NOT NULL PRIMARY KEY, "fetch_date" DATETIME NOT NULL, "cookie_bytes" BLOB NOT NULL) WITHOUT ROWID', [])
+2025-11-25 20:19:50,094 - DEBUG - ('SELECT "t1"."strategy", "t1"."fetch_date", "t1"."cookie_bytes" FROM "_cookieschema" AS "t1" WHERE ("t1"."strategy" = ?) LIMIT ? OFFSET ?', ['curlCffi', 1, 0])
+2025-11-25 20:19:50,094 - DEBUG -        Exiting _load_cookie_curlCffi()
+2025-11-25 20:19:50,094 - DEBUG - reusing persistent cookie
+2025-11-25 20:19:50,095 - DEBUG -       Exiting _get_cookie_basic()
+2025-11-25 20:19:50,095 - DEBUG -       Entering _get_crumb_basic()
+2025-11-25 20:19:50,095 - DEBUG -        Entering _get_cookie_basic()
+2025-11-25 20:19:50,095 - DEBUG - reusing cookie
+2025-11-25 20:19:50,095 - DEBUG -        Exiting _get_cookie_basic()
+2025-11-25 20:19:50,628 - DEBUG - crumb = '5SvJvkxsg2O'
+2025-11-25 20:19:50,629 - DEBUG -       Exiting _get_crumb_basic()
+2025-11-25 20:19:50,629 - DEBUG -      Exiting _get_cookie_and_crumb_basic()
+2025-11-25 20:19:50,629 - DEBUG -     Exiting _get_cookie_and_crumb()
+2025-11-25 20:19:50,950 - DEBUG - response code=200
+2025-11-25 20:19:50,951 - DEBUG -    Exiting _make_request()
+2025-11-25 20:19:50,951 - DEBUG -   Exiting get()
+2025-11-25 20:19:50,999 - DEBUG - GC=F: yfinance received OHLC data: 2025-11-17 05:00:00 -> 2025-11-24 05:00:00
+2025-11-25 20:19:51,014 - DEBUG - GC=F: OHLC after cleaning: 2025-11-17 00:00:00-05:00 -> 2025-11-24 00:00:00-05:00
+2025-11-25 20:19:51,037 - DEBUG - GC=F: OHLC after combining events: 2025-11-17 00:00:00-05:00 -> 2025-11-24 00:00:00-05:00
+2025-11-25 20:19:51,059 - DEBUG - GC=F: yfinance returning OHLC: 2025-11-17 00:00:00-05:00 -> 2025-11-24 00:00:00-05:00
+2025-11-25 20:19:51,060 - DEBUG -  Exiting history()
+2025-11-25 20:19:51,060 - DEBUG - Exiting history()
+2025-11-25 20:19:51,060 - INFO - Berhasil mengambil 6 baris data
+2025-11-25 20:19:51,061 - INFO - Rentang: 2025-11-17 s/d 2025-11-24
+2025-11-25 20:19:51,061 - INFO - Harga terakhir: $4091.90 per troy ounce
+2025-11-25 20:19:51,061 - DEBUG - Last 3 data points from Yahoo Finance:
+2025-11-25 20:19:51,061 - DEBUG - 2025-11-24: $4091.90
+2025-11-25 20:19:51,062 - DEBUG - 2025-11-21: $4076.70
+2025-11-25 20:19:51,062 - DEBUG - 2025-11-20: $4056.50
+2025-11-25 20:19:51,062 - INFO - Starting database save operation...
+2025-11-25 20:19:51,062 - INFO - Attempting database connection...
+2025-11-25 20:19:51,068 - INFO - Koneksi database berhasil - Total data existing: 1256
+2025-11-25 20:19:51,072 - DEBUG - Check existing data for 2025-11-17: Found
+2025-11-25 20:19:51,073 - DEBUG - Skipped: 2025-11-17: Data sama, skip
+2025-11-25 20:19:51,075 - DEBUG - Check existing data for 2025-11-18: Found
+2025-11-25 20:19:51,075 - DEBUG - Skipped: 2025-11-18: Data sama, skip
+2025-11-25 20:19:51,076 - DEBUG - Check existing data for 2025-11-19: Found
+2025-11-25 20:19:51,077 - DEBUG - Skipped: 2025-11-19: Data sama, skip
+2025-11-25 20:19:51,078 - DEBUG - Check existing data for 2025-11-20: Found
+2025-11-25 20:19:51,078 - DEBUG - Skipped: 2025-11-20: Data sama, skip
+2025-11-25 20:19:51,079 - DEBUG - Check existing data for 2025-11-21: Found
+2025-11-25 20:19:51,079 - DEBUG - Skipped: 2025-11-21: Data sama, skip
+2025-11-25 20:19:51,080 - DEBUG - Check existing data for 2025-11-24: Found
+2025-11-25 20:19:51,080 - DEBUG - Skipped: 2025-11-24: Data sama, skip
+2025-11-25 20:19:51,081 - INFO - Database COMMIT successful!
+2025-11-25 20:19:51,081 - INFO - Summary: Saved: 0, Updated: 0, Skipped: 6, Errors: 0
+2025-11-25 20:19:51,081 - INFO - JSON Result: {"success": true, "saved": 0, "updated": 0, "skipped": 6, "errors": 0}
+2025-11-25 20:19:51,081 - INFO - Database connection closed
+2025-11-25 20:19:51,081 - INFO - Update completed successfully!
+2025-11-25 20:19:51,081 - INFO - ======================================================================
+2025-11-25 20:19:51,085 - INFO - Script execution finished
+2025-11-25 20:20:19,337 - INFO - Script execution started
+2025-11-25 20:20:19,338 - INFO - Command line arguments: ['C:\\laragon\\www\\prediksi-harga-emas\\python_scripts/update_data.py', 'historical', '5']
+2025-11-25 20:20:19,338 - INFO - ======================================================================
+2025-11-25 20:20:19,338 - INFO - Initializing GoldDataUpdater
+2025-11-25 20:20:19,338 - INFO - Python Version: 3.10.6 (tags/v3.10.6:9c7b4bd, Aug  1 2022, 21:53:49) [MSC v.1932 64 bit (AMD64)]
+2025-11-25 20:20:19,338 - INFO - Working Directory: C:\laragon\www\prediksi-harga-emas\public
+2025-11-25 20:20:19,339 - INFO - Script Directory: C:\laragon\www\prediksi-harga-emas\python_scripts
+2025-11-25 20:20:19,339 - INFO - Log File: C:\laragon\www\prediksi-harga-emas\python_scripts\logs\update_data_20251125.log
+2025-11-25 20:20:19,339 - DEBUG - Database Configuration:
+2025-11-25 20:20:19,339 - DEBUG - Host: 127.0.0.1
+2025-11-25 20:20:19,339 - DEBUG - Port: 3306
+2025-11-25 20:20:19,339 - DEBUG - Database: db_prediksi_emas
+2025-11-25 20:20:19,339 - DEBUG - User: root
+2025-11-25 20:20:19,339 - DEBUG - Password: (empty)
+2025-11-25 20:20:19,339 - INFO - Command received: historical
+2025-11-25 20:20:19,339 - ERROR - Unknown command: historical
+2025-11-25 20:20:19,340 - INFO - Script execution finished
+2025-11-25 20:22:57,584 - INFO - Script execution started
+2025-11-25 20:22:57,584 - INFO - Command line arguments: ['python_scripts/update_data.py', 'historical', '2']
+2025-11-25 20:22:57,584 - INFO - ======================================================================
+2025-11-25 20:22:57,585 - INFO - Initializing GoldDataUpdater
+2025-11-25 20:22:57,585 - INFO - Python Version: 3.10.6 (tags/v3.10.6:9c7b4bd, Aug  1 2022, 21:53:49) [MSC v.1932 64 bit (AMD64)]
+2025-11-25 20:22:57,585 - INFO - Working Directory: C:\laragon\www\prediksi-harga-emas
+2025-11-25 20:22:57,585 - INFO - Script Directory: C:\laragon\www\prediksi-harga-emas\python_scripts
+2025-11-25 20:22:57,585 - INFO - Log File: C:\laragon\www\prediksi-harga-emas\python_scripts\logs\update_data_20251125.log
+2025-11-25 20:22:57,586 - DEBUG - Database Configuration:
+2025-11-25 20:22:57,586 - DEBUG - Host: 127.0.0.1
+2025-11-25 20:22:57,586 - DEBUG - Port: 3306
+2025-11-25 20:22:57,586 - DEBUG - Database: db_prediksi_emas
+2025-11-25 20:22:57,586 - DEBUG - User: root
+2025-11-25 20:22:57,587 - DEBUG - Password: (empty)
+2025-11-25 20:22:57,587 - INFO - Command received: historical
+2025-11-25 20:22:57,587 - ERROR - Unknown command: historical
+2025-11-25 20:22:57,587 - INFO - Script execution finished
+2025-11-25 20:23:07,841 - INFO - Script execution started
+2025-11-25 20:23:07,841 - INFO - Command line arguments: ['python_scripts/update_data.py', 'historical', '3']
+2025-11-25 20:23:07,841 - INFO - ======================================================================
+2025-11-25 20:23:07,841 - INFO - Initializing GoldDataUpdater
+2025-11-25 20:23:07,842 - INFO - Python Version: 3.10.6 (tags/v3.10.6:9c7b4bd, Aug  1 2022, 21:53:49) [MSC v.1932 64 bit (AMD64)]
+2025-11-25 20:23:07,842 - INFO - Working Directory: C:\laragon\www\prediksi-harga-emas
+2025-11-25 20:23:07,842 - INFO - Script Directory: C:\laragon\www\prediksi-harga-emas\python_scripts
+2025-11-25 20:23:07,842 - INFO - Log File: C:\laragon\www\prediksi-harga-emas\python_scripts\logs\update_data_20251125.log
+2025-11-25 20:23:07,843 - DEBUG - Database Configuration:
+2025-11-25 20:23:07,843 - DEBUG - Host: 127.0.0.1
+2025-11-25 20:23:07,843 - DEBUG - Port: 3306
+2025-11-25 20:23:07,843 - DEBUG - Database: db_prediksi_emas
+2025-11-25 20:23:07,844 - DEBUG - User: root
+2025-11-25 20:23:07,844 - DEBUG - Password: (empty)
+2025-11-25 20:23:07,844 - INFO - Command received: historical
+2025-11-25 20:23:07,844 - ERROR - Unknown command: historical
+2025-11-25 20:23:07,845 - INFO - Script execution finished
+2025-11-25 20:23:43,567 - INFO - Script execution started
+2025-11-25 20:23:43,568 - INFO - Command line arguments: ['python_scripts/update_data.py', 'historical']
+2025-11-25 20:23:43,568 - INFO - ======================================================================
+2025-11-25 20:23:43,568 - INFO - Initializing GoldDataUpdater
+2025-11-25 20:23:43,569 - INFO - Python Version: 3.10.6 (tags/v3.10.6:9c7b4bd, Aug  1 2022, 21:53:49) [MSC v.1932 64 bit (AMD64)]
+2025-11-25 20:23:43,569 - INFO - Working Directory: C:\laragon\www\prediksi-harga-emas
+2025-11-25 20:23:43,569 - INFO - Script Directory: C:\laragon\www\prediksi-harga-emas\python_scripts
+2025-11-25 20:23:43,569 - INFO - Log File: C:\laragon\www\prediksi-harga-emas\python_scripts\logs\update_data_20251125.log
+2025-11-25 20:23:43,569 - DEBUG - Database Configuration:
+2025-11-25 20:23:43,569 - DEBUG - Host: 127.0.0.1
+2025-11-25 20:23:43,569 - DEBUG - Port: 3306
+2025-11-25 20:23:43,569 - DEBUG - Database: db_prediksi_emas
+2025-11-25 20:23:43,569 - DEBUG - User: root
+2025-11-25 20:23:43,569 - DEBUG - Password: (empty)
+2025-11-25 20:23:43,569 - INFO - Command received: historical
+2025-11-25 20:23:43,570 - ERROR - Unknown command: historical
+2025-11-25 20:23:43,570 - INFO - Script execution finished

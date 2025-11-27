@@ -1,0 +1,8 @@
+yfinance
+prophet
+pandas
+numpy
+mysql-connector-python
+python-dotenv
+scikit-learn
+pymysql
